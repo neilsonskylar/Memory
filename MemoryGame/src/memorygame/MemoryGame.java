@@ -32,4 +32,5 @@ public class MemoryGame {
         System.out.println("\nWelcome " + this.name + "\n");
         System.out.println(this.instructions);
     }
+    
 }
