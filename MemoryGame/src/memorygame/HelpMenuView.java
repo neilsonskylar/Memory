@@ -1,4 +1,4 @@
-*
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -10,17 +10,14 @@ import java.util.Scanner;
 
 /**
  *
- * @author jacksonrkj
+ * @author skylar
  */
 public class HelpMenuView  {
         
     private final static String[][] menuItems = {
         {"B", "The board"},
-        {"C", "A computer player"}, 
-        {"G", "The Tic-Tac-Toe game"},
-        {"L", "A location"},
-        {"M", "A marker"},
-        {"R", "A regular player"},        
+        {"G", "The Memory game"},
+        {"L", "Player Help"},
         {"Q", "Quit Help"}        
     };
     
@@ -50,25 +47,16 @@ public class HelpMenuView  {
                 case "B":
                     this.helpMenuControl.displayBoardHelp();
                     break;
-                case "C":
-                    this.helpMenuControl.displayComputerPlayerHelp();
-                    break;
                 case "G":
                     this.helpMenuControl.displayGameHelp();
                     break;                  
                 case "L":
-                    this.helpMenuControl.displayLocationHelp();
-                    break;
-                case "M":
-                    this.helpMenuControl.displayMarkerHelp();
-                    break;
-                 case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
-                    break; 
+                    break;
                 case "Q": 
                     break;
                 default: 
-                    new TicTacToeError().displayError("Invalid command. Please enter a valid command.");
+                    new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
                     continue;
             }
         } while (!command.equals("Q"));  
