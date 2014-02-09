@@ -6,7 +6,7 @@ package memorygame;
 
 /**
  *
- * @author jacksonrkj
+ * @author skylar
  */
 public class MemoryGameError {
  

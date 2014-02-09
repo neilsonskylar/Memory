@@ -7,7 +7,7 @@ package memorygame;
 
 /**
  *
- * @author jacksonrkj
+ * @author Skylar
  */
 public class HelpMenuControl  {
     
