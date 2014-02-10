@@ -20,7 +20,14 @@ public class MemoryGame {
       MemoryGame myGame = new MemoryGame();
       myGame.getName();
       myGame.displayHelp();
+      MainMenuView mainMenu = new MainMenuView();
+
+        mainMenu.getInput();
+    
         // TODO code application logic here
+      // game.initialize
+      // getinput
+      
     }
     public void getName(){
     Scanner input = new Scanner(System.in);
