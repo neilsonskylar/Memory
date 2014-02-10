@@ -29,9 +29,10 @@ public MainMenuController() {
     public void displayHelpMenu() {
         System.out.println();
         displayHelpBorder();     
-        System.out.println( 
-                 "HelpMenuControl. "
-                 ); 
+        System.out.println();
+        HelpMenuView mainMenu = new HelpMenuView();
+
+        mainMenu.getInput();
         displayHelpBorder();
     }
             
