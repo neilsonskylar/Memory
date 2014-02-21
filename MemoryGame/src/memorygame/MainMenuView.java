@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class MainMenuView {
 private final static String[][] menuItems = {
+        {"N", "Enter the names of the players"},
         {"A", "Start Game"},
         {"B", "Help Menu"},
         {"C", "Player"},
@@ -51,6 +52,9 @@ private final static String[][] menuItems = {
                     break;                  
                 case "C":
                     this.MainMenuController.displayPlayer();
+                    break;
+                case "N":
+                    this.MainMenuController.createPlayerList();
                     break;
                 case "Q": 
                     break;

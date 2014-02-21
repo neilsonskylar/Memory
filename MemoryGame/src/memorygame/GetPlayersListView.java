@@ -44,12 +44,6 @@ public class GetPlayersListView {
                 continue;
             }
             
-            if (playersName.equals("Computer")) {
-                new MemoryGameError().displayError(
-                        "This is a reserved name. You can not use it. "
-                        + "Try again or enter \"Q\" to quit.");
-                continue;
-            }
             
             if (alreadyInList(listOfPlayerNames, playersName)) {
                 new MemoryGameError().displayError(
@@ -90,11 +84,12 @@ public class GetPlayersListView {
             for (int i = 0; i < names.length-1; i++) {
                 int compareResult = names[i].compareTo(names[i+1]);
                 if (compareResult > 0) {
-                    // swap names
+                    
                     tmpName = names[i];
                     names[i] = names[i+1];
                     names[i+1] = tmpName;
                     notDone = true;
+                    // swap names
                 } 
             }
         }
