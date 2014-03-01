@@ -14,7 +14,6 @@ import java.util.Scanner;
  */
 public class MainMenuView {
 private final static String[][] menuItems = {
-        {"N", "Enter the names of the players"},
         {"A", "Start Game"},
         {"B", "Help Menu"},
         {"C", "Player"},
@@ -35,7 +34,7 @@ private final static String[][] menuItems = {
         String command;
         Scanner inFile = new Scanner(System.in);
         
-        do {
+         
             
             this.display(); // display the menu
             
@@ -53,16 +52,13 @@ private final static String[][] menuItems = {
                 case "C":
                     this.MainMenuController.displayPlayer();
                     break;
-                case "N":
-                    this.MainMenuController.createPlayerList();
-                    break;
                 case "Q": 
                     break;
                 default: 
                     new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
+                    break;
             }
-        } while (!command.equals("Q"));  
+          
         
          return;
     }
