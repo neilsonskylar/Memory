@@ -12,19 +12,16 @@ package memorygame;
  */
 public class MainMenuController {
     
-public MainMenuController() {}
+
         
     public void displayHelpBorder() {       
         System.out.println(
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }     
     public void displayStartGame() {
-        Board board = new Board();
-        for(;;) { // change this loop 
-            board.display();
-            board.getCoord();
+        
             //checkForMatch
-        }
+        
     }
     
     

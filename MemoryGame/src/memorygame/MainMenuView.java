@@ -16,8 +16,8 @@ public class MainMenuView {
 private final static String[][] menuItems = {
         {"A", "Start Game"},
         {"B", "Help Menu"},
-        {"C", "Player"},
-        {"Q", "Quit Help"}        
+        {"C", "Player Stats"},
+        {"Q", "Quit"}        
     };
     
     // Create instance of the HelpMenuControl (action) class
@@ -29,7 +29,7 @@ private final static String[][] menuItems = {
     } 
     
     // display the help menu and get the end users input selection
-    public void getInput() {       
+    public String getInput() {       
               
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -42,29 +42,14 @@ private final static String[][] menuItems = {
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
-            switch (command) {
-                case "A":
-                    this.MainMenuController.displayStartGame();
-                    break;
-                case "B":
-                    this.MainMenuController.displayHelpMenu();
-                    break;                  
-                case "C":
-                    this.MainMenuController.displayPlayer();
-                    break;
-                case "Q": 
-                    break;
-                default: 
-                    new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
-                    break;
-            }
+            
           
         
-         return;
+         return command;
     }
 
         // displays the help menu
-    public final void display() {
+    private final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

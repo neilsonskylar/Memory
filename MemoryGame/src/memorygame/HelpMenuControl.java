@@ -47,6 +47,8 @@ public class HelpMenuControl  {
         displayHelpBorder();
     }
     
+    //public void display
+    
         
 
                      

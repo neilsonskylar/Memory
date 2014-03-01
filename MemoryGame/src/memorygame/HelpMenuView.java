@@ -18,7 +18,7 @@ public class HelpMenuView  {
         {"B", "The board"},
         {"G", "The Memory game"},
         {"L", "Player Help"},
-        {"Q", "Quit Help"}        
+        {"Q", "Quit"}        
     };
     
     // Create instance of the HelpMenuControl (action) class
@@ -30,40 +30,7 @@ public class HelpMenuView  {
     } 
     
     // display the help menu and get the end users input selection
-    public void getInput() {       
-              
-        String command;
-        Scanner inFile = new Scanner(System.in);
-        
-        do {
-            
-            this.display(); // display the menu
-            
-            // get commaned entered
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            
-            switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
-                    break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
-                    break;                  
-                case "L":
-                    this.helpMenuControl.displayRealPlayerHelp();
-                    break;
-                case "Q": 
-                    break;
-                default: 
-                    new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
-            }
-        } while (!command.equals("Q"));  
-        
-         return;
-    }
-
+    
         // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");

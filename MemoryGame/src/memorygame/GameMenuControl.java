@@ -20,12 +20,9 @@ public class GameMenuControl {
 
        
     
-   public void takeTurn() {
-        System.out.println("\n\ttakeTurn() called");
-    }
-   
+
        
-   public void displayBoard() {
+   public void displayContinue() {
         System.out.println("\n\tdisplayBoard() called");
     }
    

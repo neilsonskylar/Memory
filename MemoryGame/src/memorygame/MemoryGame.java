@@ -21,14 +21,69 @@ public class MemoryGame {
       myGame.getName();
       myGame.displayHelp();
       MainMenuView mainMenu = new MainMenuView();
-
-        mainMenu.getInput();
-    
-        // TODO code application logic here
-      // game.initialize
-      // getinput
+      MainMenuController mainMenuController = new MainMenuController();
+      HelpMenuControl helpMenuControl = new HelpMenuControl();
+      String command;
+      Board board = new Board();
+       do {
+         //add a do while loop here
+        command=mainMenu.getInput();
+        switch (command) {
+                case "A":
+                    //mainMenuController.displayStartGame();
+                    do {
+                        //this is where the game runs
+                        
+                        board.display();
+                        Scanner inFile = new Scanner(System.in);
+                        command = inFile.nextLine();
+                        command = command.trim().toUpperCase();
+                        switch (command) {
+                            case "B":
+                                helpMenuControl.displayBoardHelp();
+                                break;
+                            case "G":
+                                helpMenuControl.displayGameHelp();
+                                break;                  
+                            case "L":
+                                helpMenuControl.displayRealPlayerHelp();
+                                break;
+                            case "M":
+                                board.getCoord();
+                                break;
+                            case "Q": 
+                    
+                                break;
+                            default: 
+                                new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
+                                break;
+                                        
+                            }
+                    }
+                    while(command.equals("Q")==false);
+                    break;
+                case "B":
+                    mainMenuController.displayHelpMenu();
+                    break;                  
+                case "C":
+                    mainMenuController.displayPlayer();
+                    break;
+                case "Q": 
+                    break;
+                default: 
+                    new MemoryGameError().displayError("Invalid command. Please enter a valid command.");
+                    break;
+            }
+        // add another do while loop here
+        // code to run game goes here
+        // add a switch statement here
       
+    
+ 
+       }
+       while (command.equals("Q")==false);
     }
+    
     public void getName(){
     Scanner input = new Scanner(System.in);
     System.out.println("Enter your name: ");
@@ -38,6 +93,8 @@ public class MemoryGame {
     public void displayHelp() {
         System.out.println("\nWelcome " + this.name + "\n");
         System.out.println(this.instructions);
-    }
     
-}
+
+    }
+}   
+

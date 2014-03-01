@@ -17,7 +17,6 @@ public class GameMenuView {
 
 
     private final static String[][] menuItems = {
-        {"T", "Take your turn"},
         {"D", "Display the board"},
         {"N", "New Game"},
         {"R", "Report stastics"},
@@ -27,7 +26,7 @@ public class GameMenuView {
     };
 
     public GameMenuView(MemoryGame memorygame) {
-        this.gameMenuControl = new GameMenuControl(game);
+        this.gameMenuControl = new GameMenuControl();
         
     }
 
@@ -46,11 +45,8 @@ public class GameMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "T":
-                    this.gameMenuControl.takeTurn();
-                    break;
                 case "D":
-                    gameMenuControl.displayBoard();
+                    gameMenuControl.displayContinue();
                     break;
                 case "N":
                     gameMenuControl.startNewGame();
