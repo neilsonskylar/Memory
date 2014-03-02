@@ -8,14 +8,12 @@ import java.util.Scanner;
  */
 public class MemoryGame {
     String name;
-    String instructions = "This is the memory game. You must begin by selecting two boxes 1)by selecting \n"
+    String instructions = "This is the memory game. You must begin by selecting two positions 1)by selecting \n"
             +"the letter column with the number row to select the square to be turned over. After the first \n"
             + "selection press enter and then select your second option and press enter again. If the two \n"
             + "squares are the same then the squares stay facing up. If the squares are not a match then they \n"
-            + "flip back over until they are matched with their pair. \n";
-    /**
-     * @param args the command line arguments
-     */
+            + "flip back over until all are matched with their pairs. The game ends when all pairs are matched.\n";
+    
     public static void main(String[] args) {
       MemoryGame myGame = new MemoryGame();
       myGame.getName();

@@ -31,8 +31,6 @@ public class MainMenuController {
         displayHelpBorder();     
         System.out.println();
         HelpMenuView mainMenu = new HelpMenuView();
-
-        mainMenu.getInput();
         displayHelpBorder();
     }
             
